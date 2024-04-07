@@ -1,4 +1,5 @@
 def GIT_URL = "https://github.com/GopalaKrishnana-Ravi/CapStone.git"
+def BRANCH_NAME = "dev"
 pipeline {
     agent {
         label 'QA'
@@ -9,11 +10,11 @@ pipeline {
         stage ('Git SCM') {
             steps {
                 echo "Checking out from Git repository: ${GIT_URL}"
-                echo "Branch: ${env.BRANCH_NAME}"
-                
+                echo "Branch: ${BRANCH_NAME}"
+
                 checkout (
                     $class: 'GitSCM',
-                    branches: [[name: "${env.BRANCH_NAME}"]],
+                    branches: [[name: "${BRANCH_NAME}"]],
                     extensions: [],
                     userRemoteConfigs: [
                         [
