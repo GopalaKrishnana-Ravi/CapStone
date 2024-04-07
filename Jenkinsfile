@@ -7,7 +7,7 @@ pipeline {
     stages{
 //checkout scmGit(branches: [[name: '*/dev']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/GopalaKrishnana-Ravi/CapStone.git']])
         stage ('Git SCM') {
-            step {
+            steps {
                 checkout (
                     $class: 'GitSCM',
                     branches: [[name: "${env.BRANCH_NAME}"]],
@@ -20,8 +20,8 @@ pipeline {
                 )
             }
         }
-                stage ('List workbook file'){
-            step {
+        stage ('List workbook file'){
+            steps {
                 script {
                     echo "Branch :- ${env.BRANCH_NAME}"
                     sh """
