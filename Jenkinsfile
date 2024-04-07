@@ -8,6 +8,9 @@ pipeline {
 //checkout scmGit(branches: [[name: '*/dev']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/GopalaKrishnana-Ravi/CapStone.git']])
         stage ('Git SCM') {
             steps {
+                echo "Checking out from Git repository: ${GIT_URL}"
+                echo "Branch: ${env.BRANCH_NAME}"
+                
                 checkout (
                     $class: 'GitSCM',
                     branches: [[name: "${env.BRANCH_NAME}"]],
