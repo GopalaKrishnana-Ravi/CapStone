@@ -1,7 +1,7 @@
 def GIT_URL = "https://github.com/GopalaKrishnana-Ravi/CapStone.git"
 pipeline {
     agent {
-        label QA
+        label 'QA'
     }
 
     stages{
