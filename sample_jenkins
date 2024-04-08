@@ -21,7 +21,7 @@ pipeline {
         }
         stage('for pull request') {
         when {
-            changeRequest()
+            branch 'PR-*'
         }
         steps {
             echo 'pull request is good'
