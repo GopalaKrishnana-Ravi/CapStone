@@ -37,6 +37,7 @@ pipeline {
                             echo "Branch name is:- ${env.BRANCH_NAME}"
                             echo "you are in dev branch lets' rock"
                             """
+                            break
                         }
                 }
             }
