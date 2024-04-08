@@ -24,7 +24,7 @@ pipeline {
             changeRequest()
         }
         steps {
-            echo 'pull request'
+            echo 'pull request is good'
         }
         }
     }
