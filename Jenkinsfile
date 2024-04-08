@@ -9,7 +9,6 @@ pipeline {
     }
 
     stages{
-//checkout scmGit(branches: [[name: '*/dev']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/GopalaKrishnana-Ravi/CapStone.git']])
         stage ('Git SCM') {
             steps {
                 checkout (
@@ -24,21 +23,6 @@ pipeline {
                 )
             }
         }
-        // stage ('List workbook file'){
-        //     when {
-        //         expression {
-        //             return params.BRANCH_NAME == 'main'
-        //         }
-        //     }
-        //     steps {
-        //         script {
-        //             sh """
-        //             echo "Branch name is main:- ${params.BRANCH_NAME}"
-        //             echo "you are in main branch"
-        //             """
-        //         }
-        //     }
-        // }
         stage ('Using Switch condition'){
             steps {
                 script {
