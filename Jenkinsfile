@@ -25,14 +25,16 @@ pipeline {
             }
         }
         stage ('List workbook file'){
+            when {
+                expression {
+                    return params.BRANCH_NAME == 'main'
+                }
+            }
             steps {
                 script {
                     sh """
-                    echo "Branch name:- ${params.BRANCH_NAME}"
-                    pwd
-                    ls -ltr
-                    hostname
-                    whoami
+                    echo "Branch name is main:- ${params.BRANCH_NAME}"
+                    echo "you are in main branch
                     """
                 }
             }
