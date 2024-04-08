@@ -28,6 +28,7 @@ pipeline {
             steps {
                 script {
                     sh """
+                    echo "Branch name:- ${params.BRANCH_NAME}"
                     pwd
                     ls -ltr
                     hostname
