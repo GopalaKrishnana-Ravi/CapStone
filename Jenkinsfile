@@ -52,7 +52,7 @@ pipeline {
                         case 'dev':
                             sh """
                             echo "Branch name is:- ${params.BRANCH_NAME}"
-                            echo "you are in dev branch"
+                            echo "you are in dev branch lets' rock"
                             """
                         }
                 }
