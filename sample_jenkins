@@ -24,7 +24,7 @@ pipeline {
             branch 'PR-*'
         }
         steps {
-            echo 'pull request is good'
+            echo 'pull request is not good'
         }
         }
     }
