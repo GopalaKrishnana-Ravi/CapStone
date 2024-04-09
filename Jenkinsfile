@@ -23,11 +23,15 @@ pipeline {
                 branch 'dev'
             }
             steps {
-                script {
-                    sh """
-                    echo "You are in dev branch we are good to build"
-                    sh start_db.sh
-                    """
+                withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'PASSWORD', usernameVariable: 'DOCKER_HUB_USER')]) {
+                    script {
+                        sh """
+                        echo "You are in dev branch we are good to build"
+                        sh start_db.sh
+                        docker login -u "$DOCKER_HUB_USER" -p "$PASSWORD"
+                        """
+
+                    }   
                 }
             }
         }
