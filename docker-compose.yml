@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  react-app:
+    image: gopalakrishnanravi/capstone
+    container_name: capstone-react-app
+    ports:
+      - 80:80
