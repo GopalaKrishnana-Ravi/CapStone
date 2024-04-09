@@ -11,7 +11,7 @@ docker rmi -f gopalakrishnanravi/capstone:old
 
 docker images
 
-docker login -u $Username -p $Password
+echo "$Password" | docker login -u "$Username" --password-stdin
 
 docker push gopalakrishnanravi/capstone
 
