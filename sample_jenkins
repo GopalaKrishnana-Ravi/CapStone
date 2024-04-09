@@ -24,7 +24,15 @@ pipeline {
             branch 'PR-*'
         }
         steps {
-            echo 'pull request is notvery not good'
+            echo 'pull request via PR-*'
+        }
+        }
+        stage('chnage pull request') {
+        when {
+            changeRequest()
+        }
+        steps {
+            echo 'pull request via changeRequest'
         }
         }
     }
