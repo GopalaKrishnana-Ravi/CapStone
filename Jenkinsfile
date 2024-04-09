@@ -13,7 +13,7 @@ pipeline {
                     script {
                         sh """
                         echo "you are in main branch we are good to deploy"
-                        sh deploy.sh {$DOCKER_HUB_USER} {$PASSWORD}
+                        sh deploy.sh $DOCKER_HUB_USER $PASSWORD
                         """
                     }
                 }
@@ -29,9 +29,9 @@ pipeline {
                     script {
                         sh """
                         echo "You are in dev branch we are good to build"
-                        docker login -u "$DOCKER_HUB_USER" -p "$PASSWORD"
-                        sh start_db.sh
-                        docker logout                        
+                        
+                        sh start_db.sh $DOCKER_HUB_USER $PASSWORD
+                                              
                         """
                     }   
                 }
