@@ -3,13 +3,7 @@ pipeline {
         label 'QA'
     }
     
-    stages {
-        stage('Debug') {
-            steps {
-                echo "Branch being built: ${env.BRANCH_NAME}"
-            }
-        }
-        
+    stages {        
         stage('deploy stage') {
             when {
                 branch 'main'
