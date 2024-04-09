@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   react-app:
-    image: gopalakrishnanravi/privatecapstone
+    image: gopalakrishnanravi/privatecapstone:prod
     container_name: capstone-react-app
     ports:
       - 80:80
