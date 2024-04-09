@@ -3,7 +3,7 @@
 Username=$1
 Password=$2
 
-docker tag gopalakrishnanravi/capstone gopalakrishnanravi/capstone:old
+docker tag gopalakrishnanravi/capstone gopalakrishnanravi/capstone:old 2> /dev/null
 
 docker build . -t gopalakrishnanravi/capstone
 
