@@ -1,8 +1,8 @@
+
 pipeline {
     agent {
         label 'QA'
     }
-    
     stages {        
         stage('deploy stage') {
             when {
@@ -14,6 +14,7 @@ pipeline {
                     echo "you are in main branch we are good to deploy"
                     """
                 }
+
             }
         }
 
