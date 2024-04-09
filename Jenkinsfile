@@ -9,15 +9,14 @@ pipeline {
                 branch 'main'
             }
             steps {
-                withCredentials([usernamePassword(credentialsID: 'DockerHub', passwordVariable: 'PASSWORD', usernameVariable: 'DOCKER_HUB_USER')]) {
-                script {
-                    sh """
-                    echo "you are in main branch we are good to deploy"
-                    sh deploy.sh {$DOCKER_HUB_USER} {$PASSWORD}
-                    """
+                withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'PASSWORD', usernameVariable: 'DOCKER_HUB_USER')]) {
+                    script {
+                        sh """
+                        echo "you are in main branch we are good to deploy"
+                        sh deploy.sh {$DOCKER_HUB_USER} {$PASSWORD}
+                        """
+                    }
                 }
-
-            }
             }
         }
 
