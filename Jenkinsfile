@@ -14,6 +14,7 @@ pipeline {
                         sh """
                         echo "you are in main branch we are good to deploy"
                         sh deploy.sh $DOCKER_HUB_USER $PASSWORD
+                        sh pull_deploy.sh $DOCKER_HUB_USER $PASSWORD
                         """
                     }
                 }

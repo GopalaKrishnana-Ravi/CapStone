@@ -17,10 +17,4 @@ docker login -u $Username -p $Password
 
 docker push gopalakrishnanravi/privatecapstone:prod
 
-docker pull gopalakrishnanravi/privatecapstone:prod
-
 docker logout 
-
-docker images
-
-docker-compose up -d
