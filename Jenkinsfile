@@ -33,7 +33,6 @@ pipeline {
                         sh start_db.sh
                         docker logout                        
                         """
-
                     }   
                 }
             }
