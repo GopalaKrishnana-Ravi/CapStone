@@ -29,8 +29,9 @@ pipeline {
                     script {
                         sh """
                         echo "You are in dev branch we are good to build"
-                        sh start_db.sh {$DOCKER_HUB_USER} {$PASSWORD}
-                        
+                        dokcer login -u "$DOCKER_HUB_USER" -p "$PASSWORD"
+                        sh start_db.sh
+                        docker logout                        
                         """
 
                     }   
