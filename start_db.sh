@@ -13,6 +13,6 @@ docker images
 
 docker login -u $Username -p $Password
 
-docker push gopalakrishnanravi/capstone
+docker push gopalakrishnanravi/capstone:dev
 
 docker logout
