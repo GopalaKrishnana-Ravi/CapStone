@@ -26,8 +26,7 @@ pipeline {
                 script {
                     sh """
                     echo "You are in dev branch we are good to build"
-//                    docker build . -t gopalakrishnanravi/capstone
-                    docker images
+                    sh start_db.sh
                     """
                 }
             }
