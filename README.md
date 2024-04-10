@@ -83,7 +83,9 @@ Docker Hub Like
   Private: https://hub.docker.com/repository/docker/gopalakrishnanravi/privatecapstone
   Public: https://hub.docker.com/repository/docker/gopalakrishnanravi/capstone
    
-Jenkins Script to deploy the application
+Jenkins Script to deploy the application:-
+
+
 		pipeline {
 				agent {
 				    label 'QA'
